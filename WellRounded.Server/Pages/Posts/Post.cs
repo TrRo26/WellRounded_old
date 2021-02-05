@@ -12,10 +12,10 @@ namespace Posts
         public static string TestTitle { get; set; }
         public static string TestSubHeading { get; set; }
 
-        public Post(string title, string sh)
+        public Post()
         {
-            TestTitle = title;
-            TestSubHeading = sh;
+            //TestTitle = title;
+            //TestSubHeading = sh;
         }
 
     }

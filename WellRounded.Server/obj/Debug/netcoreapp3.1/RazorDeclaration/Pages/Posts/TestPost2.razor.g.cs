@@ -76,7 +76,7 @@ using WellRounded.Server.Shared;
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/TestPost2")]
-    public partial class TestPost2 : Post
+    public partial class TestPost2 : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -87,19 +87,19 @@ using WellRounded.Server.Shared;
 #line 26 "C:\Repos\WellRounded\WellRounded.Server\Pages\Posts\TestPost2.razor"
        
 
-    static string one = "TWO My New Test Title";
-    static string two = "TWO whatever";
+    //static string one = "TWO My New Test Title";
+    //static string two = "TWO whatever";
 
-    Post test = new Post(one, two);
+    //Post test = new Post(one, two);
 
-    //public PostMetadata postMetadata = new PostMetadata
-    //{
-    //    Title = "Blog Post TWO",
-    //    SubHeading = "Blog post TWO sub heading that mentions something interesting",
-    //    Category = "Category TWO",
-    //    Author = "Travis Roy TWO",
-    //    Date = "22-22-2222"
-    //};
+    public PostMetadata postMetadata = new PostMetadata
+    {
+        Title = "Blog Post TWO",
+        SubHeading = "Blog post TWO sub heading that mentions something interesting",
+        Category = "Category TWO",
+        Author = "Travis Roy TWO",
+        Date = "22-22-2222"
+    };
 
     public static string wtf2()
     {

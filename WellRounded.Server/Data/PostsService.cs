@@ -21,7 +21,9 @@ namespace DataService
 
             foreach (var post in posts)
             {
-                if (post.FullName != "Posts.IPostMetadata" && post.FullName != "Posts.PostMetadata")
+                if (post.FullName != "Posts.IPostMetadata" &&
+                    post.FullName != "Posts.PostMetadata" &&
+                    post.FullName != "Posts.Post")
                 {
                     dynamic currentPost = Activator.CreateInstance(post);
                     allPostsMetadata.Add(currentPost.postMetadata);
@@ -31,26 +33,26 @@ namespace DataService
             return allPostsMetadata;
         }
 
-        public static List<Type> GetPosts()
-        {
-            List<Type> allPosts = new List<Type>();
+        //public static List<Type> GetPosts()
+        //{
+        //    List<Type> allPosts = new List<Type>();
 
-            IEnumerable<Type> posts = Assembly
-                .GetExecutingAssembly()
-                .GetTypes()
-                .Where(t => t.Namespace.Equals("Posts"))
-                .OrderBy(x => x.Name);
+        //    IEnumerable<Type> posts = Assembly
+        //        .GetExecutingAssembly()
+        //        .GetTypes()
+        //        .Where(t => t.Namespace.Equals("Posts"))
+        //        .OrderBy(x => x.Name);
 
-            foreach (var post in posts)
-            {
-                if (post.FullName != "Posts.IPostMetadata" && post.FullName != "Posts.PostMetadata")
-                {
-                    dynamic currentPost = Activator.CreateInstance(post);
-                    allPosts.Add((Type)currentPost);
-                }
-            }
+        //    foreach (var post in posts)
+        //    {
+        //        if (post.FullName != "Posts.IPostMetadata" && post.FullName != "Posts.PostMetadata")
+        //        {
+        //            dynamic currentPost = Activator.CreateInstance(post);
+        //            allPosts.Add((Type)currentPost);
+        //        }
+        //    }
 
-            return allPosts;
-        }
+        //    return allPosts;
+        //}
     }
 }

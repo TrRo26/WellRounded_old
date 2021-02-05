@@ -9,26 +9,27 @@
 
 
 <div style="border:1px solid black">
-    @foreach (var post in testPosts)
+    @foreach (var post in posts)
     {
-        @if (post.FullName != "Posts.IPostMetadata" && post.FullName != "Posts.PostMetadata")
+        @if (post.FullName != "Posts.IPostMetadata" && 
+             post.FullName != "Posts.PostMetadata" &&
+             post.FullName != "Posts.Post")
         {
             dynamic currentPost = Activator.CreateInstance(post);
 
             <div style="border:1px solid red">
                 <div>
-                    @*<h1>@currentPost.postMetadata.Title</h1>
+                    <h1>@currentPost.postMetadata.Title</h1>
                     <h3>@currentPost.postMetadata.SubHeading</h3>
                     <h3>@currentPost.postMetadata.Category</h3>
                     <h5>@currentPost.postMetadata.Author</h5>
-                    <h5>@currentPost.postMetadata.Date</h5>*@
+                    <h5>@currentPost.postMetadata.Date</h5>
                 </div>
-                <div>
+                @*<div>
                     <h5>@post.Name</h5>
                     <h3>@post.TestTitle</h3>
                     <h5>@post.TestSubHeading</h5>
-                </div>
-
+                </div>*@
 
                 <br />
 
@@ -46,6 +47,6 @@
             .Where(t => t.Namespace.Equals("Posts"))
             .OrderBy(x => x.Name);
 
-    List<Type> testPosts = DataService.PostsService.GetPosts();
+    //List<Type> testPosts = DataService.PostsService.GetPosts();
 
 }

@@ -62,3 +62,4 @@ C:\Repos\WellRounded\WellRounded.Server\obj\Debug\netcoreapp3.1\scopedcss\Pages\
 C:\Repos\WellRounded\WellRounded.Server\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\CategoryMenu.razor.g.cs
 C:\Repos\WellRounded\WellRounded.Server\obj\Debug\netcoreapp3.1\Razor\Shared\CategoryMenu.razor.g.cs
 C:\Repos\WellRounded\WellRounded.Server\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Posts\TestPost3.razor.g.cs
+C:\Repos\WellRounded\WellRounded.Server\obj\Debug\netcoreapp3.1\Razor\Pages\Posts\TestPost3.razor.g.cs
