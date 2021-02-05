@@ -1,0 +1,11 @@
+﻿body {
+}
+
+::deep p {
+    color: blue;
+    background: red
+}
+
+.test {
+    font-size: 80px;
+}
