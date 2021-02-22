@@ -110,9 +110,8 @@ using DataService;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 17 "C:\Repos\WellRounded\WellRounded.Server\Shared\CategoryMenu.razor"
+#line 19 "C:\Repos\WellRounded\WellRounded.Server\Shared\CategoryMenu.razor"
        
-    //public List<PostMetadata> posts = Posts.PostMetadata.GetPostsMetadata();
     public List<PostMetadata> posts = DataService.PostsService.GetPostsMetadata();
 
 #line default

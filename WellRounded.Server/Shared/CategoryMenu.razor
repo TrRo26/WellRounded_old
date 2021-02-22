@@ -9,12 +9,13 @@
     @foreach (var post in posts)
     {
         {
-            <h5 style="color: white">@post.Category</h5>
+            <p><button type="button">@post.Category</button></p>
+
+            //@onclick=@(e => UriHelper.NavigateTo(post.Name))
         }
     }
 </div>
 
 @code {
-    //public List<PostMetadata> posts = Posts.PostMetadata.GetPostsMetadata();
     public List<PostMetadata> posts = DataService.PostsService.GetPostsMetadata();
 }

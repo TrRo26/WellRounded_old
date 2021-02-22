@@ -1,4 +1,5 @@
 body[b-pjvg0inr4s] {
+    background: blue;
 }
 
 [b-pjvg0inr4s] p {
@@ -7,5 +8,5 @@ body[b-pjvg0inr4s] {
 }
 
 .test[b-pjvg0inr4s] {
-    font-size: 80px;
+    font-size: 4px;
 }

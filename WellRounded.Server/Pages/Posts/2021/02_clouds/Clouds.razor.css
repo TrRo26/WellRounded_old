@@ -1,0 +1,46 @@
+﻿.post-main-container {
+    width: 1000px;
+    margin: auto;
+}
+
+.post-main-image-container {
+}
+
+    .post-main-image {
+
+    }
+
+.post-metadata-container {
+    margin-bottom: 30px;
+}
+
+    .post-title {
+
+    }
+
+    .post-subheading {
+
+    }
+
+    .post-date {
+        display: inline-block;
+    }
+
+    .post-category {
+        display: inline-block;
+        float: right;
+        margin-bottom: 4px;
+        background-color: gray;
+        border-radius: 4px;
+        padding: 4px;
+        color: white;
+        font-size: 14px;
+    }
+
+    .post-author {
+
+    }
+
+.post-content-container {
+    text-align: justify;
+}

@@ -12,5 +12,6 @@ namespace Posts
         public string Category { get; set; }
         public string Author { get; set; }
         public string Date { get; set; }
+        public string ImageLink { get; set; }
     }
 }
