@@ -33,9 +33,18 @@ namespace DataService
             return allPostsMetadata;
         }
 
-        //public static List<Type> GetPosts()
+        //public string ApplyCategoryFilter(string category)
         //{
-        //    List<Type> allPosts = new List<Type>();
+
+        //}
+
+        /// <summary>
+        ///     Get all posts when passing null or all posts of a category when passing category name 
+        /// </summary>
+        //public static List<TestPost1> GetPosts(string category = null)
+        //{
+        //    List<TestPost1> allPosts = new List<TestPost1>();
+        //    //IEnumerable<Type> allPosts = new IEnumerable<Type>();
 
         //    IEnumerable<Type> posts = Assembly
         //        .GetExecutingAssembly()
@@ -45,14 +54,23 @@ namespace DataService
 
         //    foreach (var post in posts)
         //    {
-        //        if (post.FullName != "Posts.IPostMetadata" && post.FullName != "Posts.PostMetadata")
+        //        if (post.FullName != "Posts.IPostMetadata" &&
+        //            post.FullName != "Posts.PostMetadata" &&
+        //            post.FullName != "Posts.Post")
         //        {
         //            dynamic currentPost = Activator.CreateInstance(post);
-        //            allPosts.Add((Type)currentPost);
+        //            allPosts.Add((TestPost1)currentPost);
         //        }
         //    }
 
+        //    //if (category == null)
+        //    //{
+
+        //    //}
+
         //    return allPosts;
         //}
+
+        //public List<PostMetadata> posts = DataService.PostsService.GetPosts(null);
     }
 }

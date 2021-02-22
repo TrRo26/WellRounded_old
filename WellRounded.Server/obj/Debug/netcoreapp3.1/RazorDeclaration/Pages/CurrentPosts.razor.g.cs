@@ -118,7 +118,7 @@ using DataService;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "C:\Repos\WellRounded\WellRounded.Server\Pages\CurrentPosts.razor"
+#line 44 "C:\Repos\WellRounded\WellRounded.Server\Pages\CurrentPosts.razor"
        
 
     IEnumerable<Type> posts = Assembly
@@ -127,7 +127,7 @@ using DataService;
             .Where(t => t.Namespace.Equals("Posts"))
             .OrderBy(x => x.Name);
 
-    //List<Type> testPosts = DataService.PostsService.GetPosts();
+    //List<(TestPost1> testPosts = DataService.PostsService.GetPosts();
 
 
 #line default

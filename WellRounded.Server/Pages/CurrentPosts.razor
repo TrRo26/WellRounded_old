@@ -17,23 +17,25 @@
         {
             dynamic currentPost = Activator.CreateInstance(post);
 
-            <div style="border:1px solid red">
+            <div class="card-container"  @onclick=@(e => UriHelper.NavigateTo("Posts/" + post.Name))>
                 <div>
-                    <h1>@currentPost.postMetadata.Title</h1>
-                    <h3>@currentPost.postMetadata.SubHeading</h3>
-                    <h3>@currentPost.postMetadata.Category</h3>
-                    <h5>@currentPost.postMetadata.Author</h5>
-                    <h5>@currentPost.postMetadata.Date</h5>
+                    <div class="card-image-container">
+                        <img class="card-image" src="@currentPost.postMetadata.ImageLink" />
+                    </div>
+                    <div class="card-metadata-container">
+                        <h1 class="card-title">@currentPost.postMetadata.Title</h1>
+                        <h3 class="card-subheading">@currentPost.postMetadata.SubHeading</h3>
+                        <span class="card-date">@currentPost.postMetadata.Date</span>
+                        <span class="card-category">@currentPost.postMetadata.Category</span>
+                        @*<span class="card-author">@currentPost.postMetadata.Author</span>*@
+                    </div>
                 </div>
                 @*<div>
                     <h5>@post.Name</h5>
                     <h3>@post.TestTitle</h3>
                     <h5>@post.TestSubHeading</h5>
                 </div>*@
-
-                <br />
-
-                <button type="button" @onclick=@(e => UriHelper.NavigateTo(post.Name))>Read Post</button>
+                @*<button type="button" @onclick=@(e => UriHelper.NavigateTo(post.Name))>Read Post</button>*@
             </div>
         }
     }
@@ -47,6 +49,6 @@
             .Where(t => t.Namespace.Equals("Posts"))
             .OrderBy(x => x.Name);
 
-    //List<Type> testPosts = DataService.PostsService.GetPosts();
+    //List<(TestPost1> testPosts = DataService.PostsService.GetPosts();
 
 }
